@@ -10,7 +10,7 @@ public class Base {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое дробное число: ");
         float first = scanner.nextFloat();
-        System.out.println("Введите первую букву действия\n 1 - сложение;\n 2 - вычитание;\n 3 - умножение;\n 4 - деление\n ");
+        System.out.println("Введите действие\n 1 - сложение;\n 2 - вычитание;\n 3 - умножение;\n 4 - деление\n ");
         int action = scanner.nextInt();
         System.out.println("Введите второе дробное число: ");
         float second = scanner.nextFloat();
