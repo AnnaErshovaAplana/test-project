@@ -12,7 +12,7 @@
 import java.util.Scanner;
 /**
  * @author Anna Ershova
- * @see #calculate(float, int, float)
+ * @see #calculate(float, String, float)
  * @see #getLongestWord()
  * */
 public class Task_3 {
@@ -24,8 +24,8 @@ public static void main(String[] args) {
         if (answer == 1) {
             System.out.println("Введите первое дробное число: ");
             float first = scanner.nextFloat();
-            System.out.println("Введите действие\n 1 - сложение;\n 2 - вычитание;\n 3 - умножение;\n 4 - деление\n ");
-            int action = scanner.nextInt();
+            System.out.println("Введите первую букву действия\n С - сложение;\n В - вычитание;\n У - умножение;\n Д - деление\n ");
+            String action = scanner.next();
             System.out.println("Введите второе дробное число: ");
             float second = scanner.nextFloat();
             System.out.printf("Результат операции: %.4f \n", calculate(first, action, second));
@@ -41,15 +41,15 @@ public static void main(String[] args) {
      * @param number1 first number for calculation
      * @param action action that must be performed with two numbers
      * @param number2 second number for calculation
-     * @return calculation of number1 and number2 based on action (1 - сложение; 2 - вычитание; 3 - умножение; 4 - деление)
+     * @return calculation of number1 and number2 based on action (С - сложение; В - вычитание; У - умножение; Д - деление)
      */
-public static float calculate(float number1, int action, float number2) {
+public static float calculate(float number1, String action, float number2) {
         float result;
-        if (action == 1) {
+        if (action.equals("C") || action.equals("C")) { // Проверяем букву "С" в англ и рус алфавите
         result = number1 + number2;
-        } else if (action == 2) {
+        } else if (action.equals("В")) {
         result = number1 - number2;
-        } else if (action == 3) {
+        } else if (action.equals("У")) {
         result = number1 * number2;
         } else {
         result = number1 / number2;
