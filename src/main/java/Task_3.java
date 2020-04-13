@@ -52,7 +52,7 @@ public static float calculate(float number1, String action, float number2) {
         } else if (action.equals("У")) {
         result = number1 * number2;
         } else {
-        result = (number1 / number2) + (number1 % number2) ;
+        result = (number1 / number2);
         }
         return result;
         }
