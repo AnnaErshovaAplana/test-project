@@ -21,11 +21,12 @@ public class Start {
 
         //сохраняем действие
         System.out.println("Введите первую букву действия\n С - сложение;\n В - вычитание;\n У - умножение;\n Д - деление\n ");
-        String action = scanner.next();scanner.close();
+        String action = scanner.next();
+        scanner.close();
 
         switch (action) {
-            case "C":
-            case "С":
+            case "C": //буква в англ. раскадке
+            case "С": //буква в рус. раскадке
                 System.out.printf("Результат операции сложение: %.4f \n", firstNumber.addition(secondNumber));
                 break;
             case "В":

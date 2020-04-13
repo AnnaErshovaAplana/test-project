@@ -61,7 +61,7 @@ public abstract class Number {
     public double division(Number ... numbers) {
         double result =  this.value;
         for(Number num : numbers){
-            result /= num.value;
+            result = (result / num.value) ;
         }
         return  result;
     }
