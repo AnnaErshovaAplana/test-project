@@ -10,9 +10,6 @@ import java.util.Random;
 
 /**@author Anna Ershova
  * @see #switchMaxAndMin()
- * @see #presentInfo(Present...)
- * @see #presentPrice(Present...)
- * @see #presentWeight(Present...)
  */
 public class Task_4 {
     public static void main(String[] args) {
@@ -27,9 +24,9 @@ public class Task_4 {
         lolly1.setColor("pink");
         Cake biscuit = new Cake("Ololo", 150, 200, true);
 
-        System.out.println("Общая стоимость подарка: " + presentPrice(choco1, lolly1, biscuit));
-        System.out.println("Общий вес подарка: " + presentWeight(choco1, lolly1, biscuit));
-        presentInfo(choco1, lolly1, biscuit);
+        System.out.println("Общая стоимость подарка: " + Present.presentPrice(choco1, lolly1, biscuit));
+        System.out.println("Общий вес подарка: " + Present.presentWeight(choco1, lolly1, biscuit));
+        Present.presentInfo(choco1, lolly1, biscuit);
     }
 
     /**
@@ -79,38 +76,7 @@ public class Task_4 {
         return ("Итоговый массив: " + result);
     }
 
-    /**
-     * @param products обьекты класса Present
-     */
-    public static void presentInfo(Present ... products) {
-        for (Present product : products) {
-            System.out.println(product.toString());
-        }
-    }
 
-    /**
-     * @param products обьекты класса Present
-     * @return общую стоимость предметов в подарке (стоимость price в обьектах класса Present)
-     */
-    public static double presentPrice(Present ... products) {
-        double sum = 0;
-        for (Present product : products) {
-            sum += product.getPrice();
-        }
-        return sum;
-    }
-
-    /**
-     * @param products обьекты класса Present
-     * @return общий вес предметов в подарке (вес weight в обьектах класса Present)
-     */
-    public static int presentWeight(Present ... products) {
-        int weightTotal = 0;
-        for (Present product : products) {
-            weightTotal += product.getWeight();
-        }
-        return weightTotal;
-    }
 }
 
 

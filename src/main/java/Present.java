@@ -1,5 +1,5 @@
 
-public class Present {
+public abstract class Present {
     private String name;
     private int weight;
     private double price;
@@ -35,6 +35,39 @@ public class Present {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    /**
+     * @param products обьекты класса Present
+     */
+    public static void presentInfo(Present ... products) {
+        for (Present product : products) {
+            System.out.println(product.toString());
+        }
+    }
+
+    /**
+     * @param products обьекты класса Present
+     * @return общую стоимость предметов в подарке (стоимость price в обьектах класса Present)
+     */
+    public static double presentPrice(Present ... products) {
+        double sum = 0;
+        for (Present product : products) {
+            sum += product.getPrice();
+        }
+        return sum;
+    }
+
+    /**
+     * @param products обьекты класса Present
+     * @return общий вес предметов в подарке (вес weight в обьектах класса Present)
+     */
+    public static int presentWeight(Present ... products) {
+        int weightTotal = 0;
+        for (Present product : products) {
+            weightTotal += product.getWeight();
+        }
+        return weightTotal;
     }
 
     @Override
