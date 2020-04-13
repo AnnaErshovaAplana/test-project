@@ -8,9 +8,9 @@ package calculator_OOP;
  */
 
 public abstract class Number {
-    protected float value;
+    protected double value;
 
-    public void setValue(float value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
@@ -19,8 +19,8 @@ public abstract class Number {
      * @param numbers значения введеных чисел для операции (м.б. больше 2х)
      * @return итогое число после выполнения операции
      */
-    public float addition(Number ... numbers) {
-        float result = this.value;
+    public double addition(Number ... numbers) {
+        double result = this.value;
         for(Number num : numbers){
             result += num.value;
         }
@@ -32,8 +32,8 @@ public abstract class Number {
      * @param numbers значения введеных чисел, которые будут вычитаться из исходногоо число наследного класса Rational
      * @return итогое число после выполнения операции
      */
-    public float deduction(Number ... numbers) {
-        float result =  this.value;
+    public double deduction(Number ... numbers) {
+        double result =  this.value;
         for(Number num : numbers){
             result -= num.value;
         }
@@ -45,8 +45,8 @@ public abstract class Number {
      * @param numbers значения введеных чисел, на которые будет умножаться исходное число наследного класса Rational
      * @return итогое число после выполнения операции
      */
-    public float multiplication(Number ... numbers) {
-        float result =  this.value;
+    public double multiplication(Number ... numbers) {
+        double result =  this.value;
         for(Number num : numbers){
             result *= num.value;
         }
@@ -58,8 +58,8 @@ public abstract class Number {
      * @param numbers значения введеных чисел, на которые делиться исходное число наследного класса Rational
      * @return итогое число после выполнения операции
      */
-    public float division(Number ... numbers) {
-        float result =  this.value;
+    public double division(Number ... numbers) {
+        double result =  this.value;
         for(Number num : numbers){
             result /= num.value;
         }

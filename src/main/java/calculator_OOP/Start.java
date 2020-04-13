@@ -13,11 +13,11 @@ public class Start {
 
         //сохраняем значение через конструктор, кот принимает значение
         System.out.println("Введите первое дробное число (c запятой в качестве разделителя): ");
-        Number firstNumber = new Rational(scanner.nextFloat());
+        Number firstNumber = new Rational(scanner.nextDouble());
         //сохраняем значение через стандартный конструктор по умолчанию
         System.out.println("Введите второе дробное число (c запятой в качестве разделителя): ");
         Number secondNumber = new Rational();
-        secondNumber.setValue(scanner.nextFloat());
+        secondNumber.setValue(scanner.nextDouble());
 
         //сохраняем действие
         System.out.println("Введите первую букву действия\n С - сложение;\n В - вычитание;\n У - умножение;\n Д - деление\n ");

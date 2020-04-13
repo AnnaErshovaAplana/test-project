@@ -5,7 +5,7 @@ package calculator_OOP;
  */
 public class Rational extends Number {
    //конструктор
-    public Rational(float value) {
+    public Rational(double value) {
     this.value = value;
 }
     //конструктор без параметров
