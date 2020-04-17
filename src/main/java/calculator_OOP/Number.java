@@ -58,12 +58,15 @@ public abstract class Number {
      * @param numbers значения введеных чисел, на которые делиться исходное число наследного класса Rational
      * @return итогое число после выполнения операции
      */
-    public double division(Number ... numbers) {
-        double result =  this.value;
-        for(Number num : numbers){
-            result = (result / num.value) ;
-        }
-        return  result;
-    }
+    public double division(Number ... numbers) throws Exception {
+        double result = this.value;
 
+        for (Number num : numbers) {
+            if (num.value == (Integer) 0) {
+                throw new Exception("Невозможно выполнить деление на ноль!");
+            } else {
+                result = (result / num.value);
+            }
+        } return result;
+    }
 }
