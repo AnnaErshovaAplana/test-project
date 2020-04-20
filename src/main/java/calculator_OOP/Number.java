@@ -62,7 +62,7 @@ public abstract class Number {
         double result = this.value;
 
         for (Number num : numbers) {
-            if (num.value == (Integer) 0) {
+            if (num.value == 0.0) {
                 throw new Exception("Невозможно выполнить деление на ноль!");
             } else {
                 result = (result / num.value);
